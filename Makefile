@@ -13,7 +13,7 @@ update-submodules:
 deploy: update-submodules deploy-libs
 
 deploy-libs:
-	cd $(MODEL_SEED_CORE_DIR);
+	cd $(MODEL_SEED_CORE_DIR)
 	perl Build.PL
 	./Build installdeps --cpan_client 'cpanm' --install_base $(TARGET)
 	./Build install --install_base $(TARGET)
