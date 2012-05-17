@@ -1,7 +1,7 @@
 TOP_DIR = ../..
 include $(TOP_DIR)/tools/Makefile.common
 
-MODEL_SEED_CORE_DIR = submodule/model-seed-core
+MODEL_SEED_CORE_DIR = submodules/model-seed-core
 
 all: update-submodules deploy-lib
 
