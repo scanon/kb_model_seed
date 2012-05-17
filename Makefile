@@ -3,6 +3,8 @@ include $(TOP_DIR)/tools/Makefile.common
 
 MODEL_SEED_CORE_DIR = submodules/model-seed-core
 MFATOOLKITDIR = $(MODEL_SEED_CORE_DIR)/software/mfatoolkit
+MFATOOLKITCCFLAGS = "-O3 -fPIC -fexceptions -DNDEBUG -DIL_STD -DILOSTRICTPOD -DLINUX -I../Include/ -DNOSAFEMEM -DNOBLOCKMEM -lglpk -lpthread -lz"
+CPLEXAPI = "CPLEXapiEMPTY.cpp"
 
 all: update-submodules deploy-lib mfatoolkit
 
