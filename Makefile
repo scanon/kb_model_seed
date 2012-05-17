@@ -10,7 +10,7 @@ update-submodules:
 	git submodule init
 	git submodule update
 
-deploy: update-submodules deploy-libs
+deploy: update-submodules deploy-libs mfatoolkit
 
 mfatoolkit:
 	cd $(MFATOOLKITDIR)/Linux; make; cp mfatoolkit $(TARGET)/bin
