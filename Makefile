@@ -12,6 +12,9 @@ update-submodules:
 deploy: update-submodules deploy-libs
 
 deploy-libs:
-	perl $(MODEL_SEED_CORE_DIR)/Build.PL
-	./$(MODEL_SEED_CORE_DIR) installdeps --cpan_client 'cpanm' --install_base $(TARGET)
-	./$(MODEL_SEED_CORE_DIR) install --install_base $(TARGET)
+	pushd `pwd`
+	cd $(MODEL_SEED_CORE_DIR);
+	perl Build.PL
+	./Build installdeps --cpan_client 'cpanm' --install_base $(TARGET)
+	./Build install --install_base $(TARGET)
+	popd
