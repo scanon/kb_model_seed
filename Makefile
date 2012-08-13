@@ -2,7 +2,7 @@ TOP_DIR = ../..
 include $(TOP_DIR)/tools/Makefile.common
 
 MODEL_SEED_DIR = submodules/ModelSEED
-all: update-submodules deploy-lib mfatoolkit
+all: update-submodules deploy-libs
 
 update-submodules:
 	git submodule init
