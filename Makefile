@@ -13,6 +13,5 @@ deploy: update-submodules deploy-libs
 deploy-libs:
 	cd $(MODEL_SEED_DIR); perl Build.PL;\
 		./Build installdeps --cpan_client 'cpanm -l $(TARGET)';\
-		mv $(TARGET)/lib/perl5/* $(TARGET)/lib;\
-		rm -r $(TARGET)/lib/perl5;\
+		rsync $(TARGET)/lib/perl5/* $(TARGET)/lib;\
 		./Build install --install_base $(TARGET) --install_path lib=$(TARGET)/lib
