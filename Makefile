@@ -13,4 +13,4 @@ deploy: update-submodules deploy-libs
 deploy-libs:
 	cd $(MODEL_SEED_DIR); perl Build.PL;\
 		./Build installdeps --cpan_client 'cpanm -l $(TARGET)';\
-		./Build install --install_base $(TARGET)
+		./Build kbase --install_base $(TARGET)
