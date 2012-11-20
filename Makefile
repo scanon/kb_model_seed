@@ -14,3 +14,6 @@ deploy-libs:
 	cd $(MODEL_SEED_DIR); perl Build.PL;\
 		./Build installdeps --cpan_client 'cpanm -l $(TARGET)';\
 		./Build kbase --install_base $(TARGET)
+
+clean:
+	cd $(MODEL_SEED_DIR); ./Build clean
