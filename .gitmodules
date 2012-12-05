@@ -1,3 +1,6 @@
 [submodule "submodules/ModelSEED"]
 	path = submodules/ModelSEED
 	url = git://github.com/ModelSEED/ModelSEED.git
+[submodule "submodules/MFAToolkit"]
+	path = submodules/MFAToolkit
+	url = git://github.com/ModelSEED/MFAToolkit.git
