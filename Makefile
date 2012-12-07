@@ -17,7 +17,7 @@ deploy-libs:
 		./Build kbase --install_base $(TARGET)
 	$(MAKE) -C $(MFA_TOOLKIT_DIR)
 	cp $(MFA_TOOLKIT_DIR)/bin/mfatoolkit $(TARGET)/bin/
-	if [ ! -e $(TARGET)/bin/scip ] ; then wget http://bioseed.mcs.anl.gov/~chenry/KbaseFiles/scip $(TARGET)/bin/ ; fi
+	if [ ! -e $(TARGET)/bin/scip ] ; then wget http://bioseed.mcs.anl.gov/~chenry/KbaseFiles/scip ; mv scip $(TARGET)/bin/ ; fi
 	if [ ! -d $(TARGET)/etc/ ] ; then mkdir $(TARGET)/etc ; fi
 	if [ ! -d $(TARGET)/etc/MFAToolkit ] ; then mkdir $(TARGET)/etc/MFAToolkit ; fi
 	cp $(MFA_TOOLKIT_DIR)/etc/MFAToolkit/* $(TARGET)/etc/MFAToolkit/
