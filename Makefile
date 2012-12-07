@@ -21,6 +21,8 @@ deploy-libs:
 	if [ ! -d $(TARGET)/etc/ ] ; then mkdir $(TARGET)/etc ; fi
 	if [ ! -d $(TARGET)/etc/MFAToolkit ] ; then mkdir $(TARGET)/etc/MFAToolkit ; fi
 	cp $(MFA_TOOLKIT_DIR)/etc/MFAToolkit/* $(TARGET)/etc/MFAToolkit/
+	chmod +x $(TARGET)/bin/scip
+	chmod +x $(TARGET)/bin/mfatoolkit
 
 clean:
 	cd $(MODEL_SEED_DIR); ./Build clean
