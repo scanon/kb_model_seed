@@ -39,4 +39,9 @@ following command must be done at the top level of this git repository.
     git add submodules/MFAToolkit
     git commit -m "Updated MFAToolkit"
 
+### Updating a kb_modelseed repo with the latest content from origin
+
+    git pull
+    git submodule update
+
 That's it!
