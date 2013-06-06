@@ -13,6 +13,9 @@ update-submodules:
 
 deploy: update-submodules deploy-libs
 
+test:
+	echo "no tests implemented for kb_model_seed"
+
 deploy-libs:
 	cd $(MODEL_SEED_DIR); perl Build.PL;\
 		./Build installdeps --cpan_client 'cpanm -l $(TARGET)';\
