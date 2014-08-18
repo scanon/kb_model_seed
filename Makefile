@@ -13,6 +13,9 @@ update-submodules:
 
 deploy: update-submodules deploy-libs
 
+deploy-client:
+	echo "no client"
+
 test:
 	echo "no tests implemented for kb_model_seed"
 
