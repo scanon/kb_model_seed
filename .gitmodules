@@ -4,3 +4,4 @@
 [submodule "submodules/MFAToolkit"]
 	path = submodules/MFAToolkit
 	url = git://github.com/ModelSEED/MFAToolkit.git
+        branch = oldmfatoolkit
